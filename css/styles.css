@@ -1,0 +1,1175 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Open+Sans:300,400,600,700');
+
+/*-------------------- GENERAL ------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.wrapper {
+    width: 100%;
+    min-width: 320px;
+    overflow: hidden;
+    opacity: 0;
+    padding: 97px 0 0 0;
+}
+
+.wrapper-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*------------------- HEADER ----------------------------*/
+
+header[role='banner'] {
+    position: fixed;
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 0 5px 5px 0 rgba(103, 150, 46, .2);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+}
+
+header .wrapper-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu{
+    display: flex;
+}
+
+.header-menu li {
+    position: relative;
+    margin: 0 5px 0 5px;
+    padding: 5px 15px;
+    transition: all .4s;
+}
+
+.header-menu a {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 20px;
+}
+
+.burger {
+    display: none;
+}
+
+.header-menu li:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: -2px;
+    width: 100%;
+    height: calc(50% - 2px);
+    border: 2px solid transparent;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 0;
+    transition: .4s;
+}
+
+.header-menu li:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    left: -2px;
+    width: 100%;
+    height: calc(50% - 2px);
+    border: 2px solid transparent;
+    border-radius: 0 0 20px 20px;
+    border-top: 0;
+    transition: .4s;
+}
+
+.header-menu li:hover:before {
+    border-color: #2d8ed0;
+    top: -2px;
+}
+
+.header-menu li:hover:after {
+    border-color:#83b23a;
+    bottom: -2px;
+}
+
+header img {
+    transition: .4s;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+
+/*----------------------- VPN -----------------------*/
+
+.vpn {
+    padding: 40px 0;
+}
+
+h2 {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+h2 span {
+    border-bottom: 3px solid #2278c8;
+}
+
+.vpn-block-container {
+    display: flex;
+    align-items: stretch;
+}
+
+.vpn-block-container h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #90ba58;
+}
+
+.vpn-block-connect p {
+    padding: 0 200px 0 0;
+}
+
+.vpn-block-buy p {
+    padding:  0 150px 0 0;
+}
+
+.vpn-block-container p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.vpn-block-buy {
+    flex-shrink: 0;
+    width: 48%;
+}
+
+.vpn-block-connect {
+    flex-grow: 1;
+    width: 52%;
+    position: relative;
+    padding: 0 0 50px 0;
+}
+
+.social-list li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 0;
+    background: url("../source/images/sprite.png") no-repeat 0 0;
+}
+
+.social-list .icon-apple {
+    background-position: -30px 0;
+}
+
+.social-list .icon-linux {
+    background-position: -60px 0;
+}
+
+.social-list .icon-ios {
+    background-position: -120px 0;
+    width: 45px;
+}
+
+.social-list .icon-android {
+    background-position: -90px 0;
+}
+
+.image-alligator {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    background: url("../source/images/alligator.png");
+    width: 166px;
+    height: 199px;
+}
+
+.vpn-form {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 50px 0 0 0;
+}
+
+.button {
+    display: inline-flex;
+    height: 46px;
+    padding: 0 25px;
+    border-radius: 7px;
+    line-height: 46px;
+    vertical-align: middle;
+}
+
+.button-green {
+    background: url(../source/images/button-green.png) no-repeat center;
+    background-size: cover;
+    margin: 25px 15px 0 0;
+}
+
+.button-blue {
+    background: url(../source/images/button-blue.png) no-repeat center;
+    background-size: cover;
+    margin: 25px 0 0 0;
+}
+
+a.button,
+.vpn-form button {
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.vpn-form input,
+.vpn-form button {
+    border: none;
+}
+
+.vpn-form label {
+    margin: 25px 15px 0 0;
+    flex-grow: 1;
+}
+
+.vpn-form input {
+    display: block;
+    width: 100%;
+    height: 46px;
+    border-radius: 7px;
+    border: 1px solid #c0c8ca;
+    padding: 0 20px;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+.vpn-form input:focus {
+    box-shadow: 0 0 7px 1px #c1c6c9;
+}
+
+.button-green:hover {
+    box-shadow: 0 0 7px 3px rgba(68, 115, 31, .6);
+}
+
+.button-blue:hover {
+    box-shadow: 0 0 7px 3px rgba(31, 110, 196, .6);
+}
+
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+
+/*----------------------- STEPS -----------------------*/
+
+.steps {
+    display: flex;
+    justify-content: flex-start;
+    padding: 50px 0;
+}
+
+.steps-item {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.steps-item:last-child {
+    margin: 0;
+}
+
+.logo-steps {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+
+.logo-steps-1 {
+    background: url("../source/images/logo-steps-1.png") no-repeat center;
+}
+
+.logo-steps-2 {
+    background: url("../source/images/logo-steps-2.png") no-repeat center;
+}
+
+.logo-steps-3 {
+    background: url("../source/images/logo-steps-3.png") no-repeat center;
+}
+
+.logo-steps-4 {
+    background: url("../source/images/logo-steps-4.png") no-repeat center;
+}
+
+.steps-item h3 {
+    margin: 0 0 15px 0;
+    color: #2a87cd;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: center;
+}
+
+.steps-item p {
+    font-size: 16px;
+    text-align: center;
+}
+
+/*----------------------- ABOUT-VPN -----------------------*/
+.advantages-vpn {
+    padding: 20px 0;
+    position: relative;
+}
+
+.advantages-vpn ul {
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: list;
+}
+
+.advantages-vpn ul > li:before {
+    content: counter(list) "";
+    counter-increment: list;
+    position: absolute;
+    top: -40px;
+    left: 190px;
+    color: #e2e2e2;
+    font-size: 157px;
+    font-weight: 700;
+    z-index: -1;
+
+}
+
+.advantages-vpn-items {
+    position: relative;
+    width: calc(50% - 15px);
+    padding: 25px 15px 25px 200px;
+    z-index: 1;
+}
+
+.advantages-vpn-items:nth-child(2n-1) {
+    margin: 0 15px 0 0;
+}
+
+.advantages-vpn-items:nth-child(2n) {
+    margin: 0 0 0 15px;
+}
+
+.advantages-vpn-items h3 {
+    margin: 0 0 20px 0;
+    color: #0a7bc8;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.advantages-vpn-items p {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.advantages-vpn-items p a {
+    color: #568619;
+    text-decoration: underline;
+}
+
+.advantages-vpn-items-icon {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    width: 131px;
+    height: 121px;
+}
+
+.advantages-icon-1 {
+    background: url("../source/images/advantages-icon-1.png") no-repeat center;
+}
+
+.advantages-icon-2 {
+    background: url("../source/images/advantages-icon-2.png") no-repeat center;
+}
+
+.advantages-icon-3 {
+    background: url("../source/images/advantages-icon-3.png") no-repeat center;
+}
+
+.advantages-icon-4 {
+    background: url("../source/images/advantages-icon-4.png") no-repeat center;
+}
+
+.advantages-icon-5 {
+    background: url("../source/images/advantages-icon-5.png") no-repeat center;
+}
+
+.advantages-icon-6 {
+    background: url("../source/images/advantages-icon-6.png") no-repeat center;
+}
+
+.advantages-vpn-items p a:hover {
+    text-decoration: none;
+}
+
+/*----------------------- FOOTER -----------------------*/
+
+footer[role='contentinfo'] {
+    padding: 25px 0;
+    background: url("../source/images/background-footer.jpg") center 0;
+    background-size: cover;
+}
+
+footer .wrapper-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-block-left,
+.footer-block-center,
+.footer-block-right {
+    padding: 0 10px;
+    width: 33.3%;
+}
+
+.footer-block-center,
+.footer-block-right {
+    display: flex;
+}
+
+.copyright {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.footer-email span {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.footer-email a {
+    color: #90ba58;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 0 0 ;
+}
+
+.footer-links-title {
+    margin: 0 0 10px;
+    color: #a0d8ee;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 15px;
+}
+
+.footer-block-right .footer-links:last-child {
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0 3px 0 0;
+}
+.fa {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 2px;
+    transition: .4s;
+}
+
+.fa-facebook {
+    background: #00599f;
+}
+
+.fa-facebook:before,
+.fa-twitter:before,
+.fa-vk:before,
+.fa-google-plus {
+    color: white;
+    font-size: 16px;
+}
+
+.fa-facebook:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.fa-facebook:hover:before {
+    color: #00599f;
+}
+
+.fa-twitter {
+    background: #00aff5;
+}
+
+
+.fa-twitter:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.fa-twitter:hover:before {
+    color: #00aff5;
+}
+
+.fa-vk {
+    background: #00668f;
+}
+
+.fa-vk:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.fa-vk:hover:before {
+    color: #00668f;
+}
+
+.fa-telegram {
+    font-size: 32px;
+    color: #259bd9;
+    background: #fff 50% 50%;
+}
+
+.fa-telegram:hover {
+    color: #fff;
+    background: #259bd9;
+    transform: scale(1.1);
+}
+
+.fa-google-plus {
+    background: #ff2900;
+}
+
+.fa-google-plus:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.fa-google-plus:hover:before {
+    color: #ff2900;
+}
+
+.footer-email a:hover {
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #90ba58;
+}
+
+/*----------------------- MODAL -----------------------*/
+
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    overflow: auto; /*создает скроллы внутри модального окна, а не обрезает полностью*/
+    z-index: 101;
+}
+
+.modal-inner {
+    position: relative;
+    justify-content: space-between;
+    max-width: 990px;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    padding: 40px 50px;
+}
+
+.close-modal {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url('../source/images/close-modal.png') no-repeat center;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.modal-inner h3 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    color: #2a87cd;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+}
+
+.modal-inner h3 span {
+    font-weight: 600;
+    color: black;
+}
+
+/*------  Modal Form -------*/
+
+.modal-form button {
+    border: none;
+}
+
+.modal-form-email,
+.modal-form-subscribe {
+    width: 275px;
+    height: 46px;
+    margin: 0 30px 0 0;
+    padding: 0 20px;
+    border: 1px solid #c1c6c9;
+    border-radius: 5px;
+}
+
+.subscribe-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px 0;
+    border-top: 1.5px solid #bebebe;
+    border-bottom: 1.5px solid #bebebe;
+}
+
+.modal-form-subscribe {
+    position: relative;
+    color: #585858;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 46px;
+}
+
+input[type='checkbox'],
+.counter input {
+    display: none;
+}
+
+.counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 95px;
+    width: 100%;
+    height: 46px;
+    border-left: 1px solid #c1c6c9;
+    padding: 0 18px;
+}
+
+.counter-minus {
+    background: url("../source/images/counter-minus.png") no-repeat center;
+    width: 10px;
+    height: 8px;
+}
+
+.counter-value {
+    color: #585858;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.counter-plus {
+    background: url("../source/images/counter-plus.png")no-repeat center;
+    width: 10px;
+    height: 8px;
+}
+
+.modal-form-checkbox label {
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type='checkbox'] + label:before {
+    content: '';
+    display: inline-block;
+    border: 1px solid #c1c6c9;
+    border-radius: 5px;
+    margin: 0 20px 0 0;
+    height: 46px;
+    width: 46px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+}
+
+input[type='checkbox']:checked + label:before {
+    background: url("../source/images/checkbox.png") no-repeat center;
+}
+
+.tooltip {
+    width: 26px;
+    height: 26px;
+    background: #67972e;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 26px;
+    margin: 0 0 0 20px;
+}
+
+.buy-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 0 0;
+}
+
+.buy,
+.promo {
+    display: flex;
+}
+
+.button-modal {
+    max-width: 150px;
+    width: 100%;
+    height: 46px;
+    margin: 0 0 0 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+}
+
+.button-green-modal {
+    background: url(../source/images/button-green.png) no-repeat center;
+    background-size: cover;
+}
+
+.button-blue-modal {
+    background: url(../source/images/button-blue.png) no-repeat center;
+    background-size: cover;
+}
+
+.buy-info {
+    width: 400px;
+    padding: 0 15px;
+    text-align: end;
+}
+
+.discount {
+    font-size: 14px;
+    color: #5e902a;
+    text-transform: uppercase;
+}
+
+.total {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.total-value {
+    color: #2379c8;
+    font-weight: 700;
+}
+
+.modal-form-promo-number {
+    max-width: 205px;
+    width: 100%;
+    height: 46px;
+    padding: 0 20px;
+    border: 1px solid #c1c6c9;
+    border-radius: 5px;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+.button-green-modal:hover {
+    box-shadow: 0 0 7px 3px rgba(68, 115, 31, .6);
+}
+
+.button-blue-modal:hover {
+    box-shadow: 0 0 7px 3px rgba(31, 110, 196, .6);
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+}
+
+.modal-form-promo-number:focus,
+.modal-form-email:focus {
+    box-shadow: 0 0 7px 1px #c1c6c9;
+}
+
+/*----------------------- MEDIA -----------------------*/
+
+@media(max-width: 1090px) {
+
+    header {
+        width: 100%;
+    }
+
+    .advantages-vpn-items:nth-child(2n),
+    .advantages-vpn-items:nth-child(2n-1) {
+        width: 100%;
+        margin: 0;
+    }
+
+    footer .wrapper-inner {
+        justify-content: center;
+    }
+
+    .footer-block-center {
+        order: 1;
+    }
+
+    .footer-block-right {
+        order: 2;
+    }
+
+    .footer-block-left {
+        order: 3;
+    }
+
+    .footer-block-left {
+        width: 50%;
+        margin: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .wrapper-inner {
+        padding: 0 15px;
+    }
+
+    .burger {
+        display: block;
+        font-size: 28px;
+        color: #2071c5;
+    }
+
+    .header-menu {
+        display: block;
+        width: 100%;
+        height: calc(100vh - 97px);
+        padding: 25px 0 0;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        bottom: -150%;
+        z-index: 101;
+        transition: .6s;
+    }
+
+    .header-menu li {
+        display: block;
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+    .header-menu.active {
+        bottom: 0;
+    }
+
+    .vpn {
+        padding: 20px 0;
+    }
+
+    .vpn-block-container {
+        flex-wrap: wrap;
+    }
+
+    .vpn-block-buy,
+    .vpn-block-connect {
+        width: 100%;
+    }
+
+    .vpn-block-buy p,
+    .vpn-block-connect p {
+        padding: 0 150px;
+    }
+
+    .vpn-block-connect {
+        padding: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .image-alligator {
+        display: none;
+    }
+
+    .vpn-form {
+        display: flex;
+        flex-wrap: wrap;
+        position: static;
+    }
+
+    .vpn-block-container h3,
+    .vpn-block-container p {
+        text-align: center;
+    }
+
+    .button-container,
+    .social-list {
+        text-align: center;
+    }
+
+    h2{
+        margin: 0 0 20px;
+    }
+
+    .steps {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 25px 0;
+    }
+
+    .steps-item,
+    .steps-item:last-child {
+        margin: 15px 20px;
+    }
+
+    .footer .wrapper-inner {
+        justify-content: center;
+    }
+
+    .footer-block-left,
+    .footer-block-center,
+    .footer-block-right {
+        width: 50%;
+        margin: 0 0 30px 0;
+    }
+}
+
+@media (max-width: 985px) {
+
+    .modal-inner {
+        padding: 40px 30px 30px 30px;
+    }
+
+    .tooltip {
+        display: none;
+    }
+
+}
+
+@media (max-width: 896px) {
+
+    .subscribe-container {
+        justify-content: center;
+    }
+
+    .modal-form-checkbox {
+        margin: 20px 0 0 0;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .vpn-block-buy p,
+    .vpn-block-connect p {
+        padding: 0 75px;
+    }
+
+    .vpn-form {
+        margin: 15px 0 0 0;
+    }
+
+    .steps {
+        padding: 10px 0;
+    }
+
+    .advantages-vpn-items {
+        padding: 15px 10px 15px 100px;
+    }
+
+    .advantages-vpn ul > li:before {
+        left: 100px;
+    }
+
+    .advantages-vpn-items-icon {
+        width: 85px;
+        background-size: 85px auto;
+        top: 0;
+        left: 0;
+    }
+
+    .footer .wrapper-inner {
+        padding: 0 60px;
+    }
+
+    .footer-block-left,
+    .footer-block-center,
+    .footer-block-right {
+        width: 75%;
+    }
+
+    .footer-block-right {
+        justify-content: space-between;
+    }
+
+    .footer-block-center .footer-links:first-child {
+        margin: 0 50px 0 0;
+    }
+
+    .buy-container {
+        align-items: center;
+    }
+
+    .promo {
+        flex-wrap: wrap;
+    }
+
+    .button-blue-modal {
+        margin: 20px 0 0 0;
+    }
+
+    .modal-form-email,
+    .modal-form-subscribe {
+        width: 100%;
+        margin: 0;
+    }
+
+    .modal-form-subscribe {
+        margin: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 685px) {
+
+    .buy {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0 0 0 30px;
+    }
+
+    .buy-info {
+        padding: 0;
+        text-align: inherit;
+    }
+
+    .button-green-modal {
+        margin: 20px 0 0 0;
+    }
+
+}
+
+@media (max-width: 645px) {
+
+    .buy-container {
+        flex-wrap: wrap;
+        padding: 0 0 0 100px;
+    }
+
+    .buy {
+        margin: 20px 0 0 0;
+    }
+
+}
+
+@media (max-width: 479px) {
+
+    .vpn-block-connect .button-blue {
+        margin: 0 auto;
+    }
+
+    .vpn-form {
+        margin: 0;
+    }
+
+    .vpn-block-connect p {
+        margin: 10px 0;
+    }
+
+    .vpn-block-buy p,
+    .vpn-block-connect p {
+        padding: 0 20px;
+    }
+
+    .vpn-block-connect .button-blue {
+        margin: 25px auto;
+    }
+
+    footer .wrapper-inner {
+        padding: 0 5px;
+    }
+
+    .footer-block-left,
+    .footer-block-center,
+    .footer-block-right {
+        width: 100%;
+    }
+
+    .buy-container {
+        padding: 0 0 0 65px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .footer-block-right {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .footer-links {
+        margin: 0 50px 0 0;
+    }
+
+    .footer-block-right .footer-links {
+        padding: 10px 0;
+    }
+
+    .buy-container {
+        padding: 0 0 0 20px;
+    }
+}
