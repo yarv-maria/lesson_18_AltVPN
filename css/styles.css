@@ -34,6 +34,10 @@ ul {
     list-style: none;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 /*------------------- HEADER ----------------------------*/
 
 header[role='banner'] {
@@ -60,11 +64,11 @@ header .wrapper-inner {
 .header-menu li {
     position: relative;
     margin: 0 5px 0 5px;
-    padding: 5px 15px;
     transition: all .4s;
 }
 
 .header-menu a {
+    padding: 15px;
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 20px;
 }
@@ -73,42 +77,42 @@ header .wrapper-inner {
     display: none;
 }
 
-.header-menu li:before {
+.header-menu a:before {
     display: block;
     content: '';
     position: absolute;
     top: -22px;
     left: -2px;
     width: 100%;
-    height: calc(50% - 2px);
+    height: calc(50% + 2px);
     border: 2px solid transparent;
     border-radius: 20px 20px 0 0;
     border-bottom: 0;
     transition: .4s;
 }
 
-.header-menu li:after {
+.header-menu a:after {
     display: block;
     content: '';
     position: absolute;
     bottom: -22px;
     left: -2px;
     width: 100%;
-    height: calc(50% - 2px);
+    height: calc(50% + 2px);
     border: 2px solid transparent;
     border-radius: 0 0 20px 20px;
     border-top: 0;
     transition: .4s;
 }
 
-.header-menu li:hover:before {
+.header-menu a:hover:before {
     border-color: #2d8ed0;
-    top: -2px;
+    top: -7px;
 }
 
-.header-menu li:hover:after {
+.header-menu a:hover:after {
     border-color:#83b23a;
-    bottom: -2px;
+    bottom: -7px;
 }
 
 header img {
@@ -116,7 +120,7 @@ header img {
 }
 
 header img:hover {
-    transform: scale(1.1);
+    filter: contrast(250%);
 }
 
 
@@ -893,7 +897,7 @@ input:focus {
 
     .burger {
         display: block;
-        font-size: 28px;
+        font-size: 40px;
         color: #2071c5;
     }
 
@@ -914,6 +918,15 @@ input:focus {
         display: block;
         padding: 5px 15px;
         text-align: center;
+    }
+
+    .header-menu a:after,
+    .header-menu a:before {
+        display: none;
+    }
+
+    .header-menu a:hover {
+        color: #2379c8;
     }
 
     .header-menu.active {
@@ -1035,6 +1048,8 @@ input:focus {
 
     .advantages-vpn ul > li:before {
         left: 100px;
+        font-size: 130px;
+        top: -30px;
     }
 
     .advantages-vpn-items-icon {
@@ -1060,6 +1075,10 @@ input:focus {
 
     .footer-block-center .footer-links:first-child {
         margin: 0 50px 0 0;
+    }
+
+    .modal {
+        align-items: flex-start;
     }
 
     .buy-container {
@@ -1108,11 +1127,21 @@ input:focus {
 
     .buy-container {
         flex-wrap: wrap;
-        padding: 0 0 0 100px;
+        justify-content: center;
+    }
+
+    .promo,
+    .buy {
+        justify-content: center;
     }
 
     .buy {
         margin: 20px 0 0 0;
+    }
+
+    .buy-info {
+        width: 100%;
+        text-align: center;
     }
 
 }
@@ -1140,8 +1169,23 @@ input:focus {
         margin: 25px auto;
     }
 
+    .logo-steps {
+        background-size: 100px 100px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-steps-4 {
+        width: 70px;
+        background-size: 70px 100px;
+    }
+
+    footer[role='contentinfo'] {
+        padding: 15px 0 0 0;
+    }
+
     footer .wrapper-inner {
-        padding: 0 5px;
+        padding: 0 10px;
     }
 
     .footer-block-left,
@@ -1150,13 +1194,11 @@ input:focus {
         width: 100%;
     }
 
-    .buy-container {
-        padding: 0 0 0 65px;
-    }
 }
 
 @media (max-width: 390px) {
 
+    .footer-block-center,
     .footer-block-right {
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -1170,7 +1212,8 @@ input:focus {
         padding: 10px 0;
     }
 
-    .buy-container {
-        padding: 0 0 0 20px;
+    .footer-block-center .footer-links:first-child {
+        margin: 0 0 20px 0;
     }
+
 }
