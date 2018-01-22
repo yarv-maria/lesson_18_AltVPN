@@ -34,10 +34,6 @@ ul {
     list-style: none;
 }
 
-html {
-    overflow-y: scroll;
-}
-
 /*------------------- HEADER ----------------------------*/
 
 header[role='banner'] {
@@ -519,6 +515,7 @@ footer .wrapper-inner {
     display: inline-block;
     margin: 0 3px 0 0;
 }
+
 .fa {
     width: 32px;
     height: 32px;

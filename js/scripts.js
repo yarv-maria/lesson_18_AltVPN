@@ -50,8 +50,5 @@ $(window).ready(function () {
         $('.header-menu').toggleClass('active')
     });
 
-
-
-
 });
 
